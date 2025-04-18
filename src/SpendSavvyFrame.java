@@ -29,6 +29,8 @@ public class SpendSavvyFrame extends javax.swing.JFrame {
         initComponents();
         initButtonListeners();
         setupSearch();
+        
+        setLocationRelativeTo(null);
     }
 
     private void initButtonListeners() {
@@ -243,6 +245,7 @@ public class SpendSavvyFrame extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(getPreferredSize());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -332,10 +335,6 @@ public class SpendSavvyFrame extends javax.swing.JFrame {
                 .addComponent(totalExpensesLabel)
                 .addGap(0, 161, Short.MAX_VALUE))
         );
-
-        //double total = calculateTotal();
-        //String formattedTotal = String.format("₱%,.2f", total);
-        //totalExpensesLabel.setText(formattedTotal);
 
         categoryComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Food & Dining", "Transportation", "Utilities", "Housing", "Health & Medical", "Entertainment", "Shopping", "Education", "Savings", "Debt Payments", "Gifts & Donations", "Others / Misc." }));
@@ -473,12 +472,14 @@ public class SpendSavvyFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SpendSavvyFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new SpendSavvyFrame().setVisible(true);
+                SpendSavvyFrame frame = new SpendSavvyFrame();
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
             }
         });
     }

@@ -3,6 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
       <Connection component="Form" name="preferredSize" type="property"/>
     </Property>
@@ -302,7 +303,6 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//double total = calculateTotal();&#xa;//String formattedTotal = String.format(&quot;&#x20b1;%,.2f&quot;, total);&#xa;//totalExpensesLabel.setText(formattedTotal);"/>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(&quot;P0.00&quot;)"/>
           </AuxValues>
         </Component>
